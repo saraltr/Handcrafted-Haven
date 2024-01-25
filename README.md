@@ -5,7 +5,7 @@ Handcrafted Haven aims to revolutionize the way handcrafted items are discovered
 
 # Group Members
 
-David Adeogun 
+David T Adeogun 
 
 McDonald Musimwa 
 
