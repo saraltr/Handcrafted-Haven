@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import "./ui/globals.css";
+import { playpen } from '@/app/ui/fonts/fonts';
 
 export const metadata: Metadata = {
-  title: "Handcrafted Haven",
-  description: "Handcrafted Haven is a place for handcrafted goods.",
+  title: {
+    template: '%s | Handcrafted Haven',
+    default: 'Handcrafted Haven',
+  },
+  description: 'Handcrafted Haven is a place for handcrafted goods.',
 };
 
 export default function RootLayout({
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${playpen.className}`}>{children}</body>
     </html>
   );
 }
