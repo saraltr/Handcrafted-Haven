@@ -22,9 +22,9 @@ export default function RootLayout({
         {children}
         <footer>
           <div className="footer-container">
-            <Link href="/terms-and-conditions">Terms and Conditions</Link>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/faqs">FAQs</Link>
+            <Link href="/footer/terms">Terms and Conditions</Link>
+            <Link href="/footer/privacy">Privacy Policy</Link>
+            <Link href="/footer/faq">FAQs</Link>
           </div>
         </footer>
       </body>

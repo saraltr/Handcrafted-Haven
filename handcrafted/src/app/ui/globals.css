@@ -124,14 +124,20 @@ a {
 
 /* Footer Styles */
 footer {
-  padding: 40px;
+  padding: 20px;
   text-align: center;
-  background-color: var(--light-background); /* Adjust the color as needed */
+  background-color: var(--light-background); 
   border-top: 1px solid #e7e7e7;
 }
 
 .footer-container a {
   margin-right: 15px;
   text-decoration: none;
-  color: var(--main-green); /* Adjust the color as needed */
+  color: var(--main-green); 
+  
+  margin-right: 0;
+}
+
+.footer-container a:not(:last-child) {
+  margin-right: 15px;
 }
