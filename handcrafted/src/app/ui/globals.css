@@ -87,10 +87,6 @@
   margin: 0;
 }
 
-body {
-  background-color: var(--light-background);
-}
-
 h1,
 h2,
 h3,
@@ -134,10 +130,99 @@ footer {
   margin-right: 15px;
   text-decoration: none;
   color: var(--main-green); 
-  
   margin-right: 0;
 }
 
 .footer-container a:not(:last-child) {
   margin-right: 15px;
+}
+
+/* banner */
+
+.bannerContainer {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  background-color: #3c000034;
+  padding: 3.5rem;
+}
+.bannerContainer h1 {
+  font-size: 2.5rem;
+}
+.bannerImg {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.bannerImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bannerImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.catchText {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.info div {
+  flex: 1;
+  padding: 20px;
+  background-color: #6d9c80c9;
+  border-radius: 8px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+  color: var(--dark-brown);
+}
+
+.info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--dark-brown)
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--dark-brown);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--main-green);
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+}
+
+.arrowIcon {
+  width: 1em;
+  height: 1em;
+  margin-left: 0.2em;
+  transition: transform 0.2s ease;
+}
+
+button:hover .arrowIcon {
+  transform: translateX(0.3em);
 }
