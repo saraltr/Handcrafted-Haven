@@ -1,9 +1,16 @@
 /* RootLayout.module.css */
-.footerContainer {
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure the wrapper fills at least the whole viewport height */
+  }
+  
+  .footerContainer {
     background-color: #f8f8f8; /* Footer background color */
     padding: 20px;
     text-align: center;
     border-top: 1px solid #e7e7e7;
+    margin-top: auto; /* Push the footer to the bottom */
   }
   
   .footerContainer a {

@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import "./ui/globals.css";
 import { playpen } from '@/app/ui/fonts/fonts';
 import Link from 'next/link';
-import Copyright from './footer/Copyright';
-import styles from './footer/footer.module.css'
+import Copyright from './footer/Copyright'; {/*for the Copyright in the footer*/}
+import styles from './footer/footer.module.css'; {/*To style the footer*/}
 
 export const metadata: Metadata = {
   title: {
@@ -21,16 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${playpen.className}`}>
-        {children}
-        <footer className={styles.footerContainer}>
-          <Link href="/footer/terms">Terms and Conditions</Link>
-          <Link href="/footer/privacy">Privacy Policy</Link>
-          <Link href="/footer/faq">FAQs</Link>
-          <Copyright />
-        </footer>
-      </body>
-    </html>
+    <div className={styles.pageWrapper}> {/* This div wraps the content and the footer */}
+      {children} {/* Main page content */}
+      <footer className={styles.footerContainer}>
+        <Link href="/footer/terms">Terms and Conditions</Link>
+        <Link href="/footer/privacy">Privacy Policy</Link>
+        <Link href="/footer/faq">FAQs</Link>
+        <Copyright />
+      </footer>
+    </div>
   );
 }
