@@ -36,7 +36,7 @@ const Banner: React.FC<BannerProps> = ({ bannerImage, title, subtitle, buttonTex
         </div>
       )}
       {buttonText && (
-        <Link href="/login">
+        <Link href="/register">
           <button>{buttonText}</button>
         </Link>
       )}

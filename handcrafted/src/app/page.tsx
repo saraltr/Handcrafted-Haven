@@ -2,10 +2,14 @@ import React from "react";
 import Banner from "@/app/ui/banner";
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import bannerImage from "@/public/images/banner1.jpg";
+import { getServerSession } from "next-auth"
+import { authConfig } from "../../pages/api/auth/[...nextauth]";
 
-export default function Page() {
+export default async function Page() {
   const nb1 = 35452;
   const nb2 = 11544;
+
+  const session = await getServerSession(authConfig)
 
   return (
     <main>
