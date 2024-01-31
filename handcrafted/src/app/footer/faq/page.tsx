@@ -56,8 +56,9 @@ export default function FaqsPage() {
           <dd>To request a refund, contact the artisan to arrange a return. Once the item is received and inspected, the artisan will issue a refund.</dd>
         </dl>
       </section>
-
-
+  
+     
     </main>
+    
   );
 }

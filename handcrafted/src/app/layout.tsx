@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import "./ui/globals.css";
 import { playpen } from '@/app/ui/fonts/fonts';
 import Link from 'next/link';
+import Copyright from './footer/Copyright';
+import styles from './footer/footer.module.css'
 
 export const metadata: Metadata = {
   title: {
@@ -10,6 +12,8 @@ export const metadata: Metadata = {
   },
   description: 'Handcrafted Haven is a place for handcrafted goods.',
 };
+
+
 
 export default function RootLayout({
   children,
@@ -20,12 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${playpen.className}`}>
         {children}
-        <footer>
-          <div className="footer-container">
-            <Link href="/footer/terms">Terms and Conditions</Link>
-            <Link href="/footer/privacy">Privacy Policy</Link>
-            <Link href="/footer/faq">FAQs</Link>
-          </div>
+        <footer className={styles.footerContainer}>
+          <Link href="/footer/terms">Terms and Conditions</Link>
+          <Link href="/footer/privacy">Privacy Policy</Link>
+          <Link href="/footer/faq">FAQs</Link>
+          <Copyright />
         </footer>
       </body>
     </html>
