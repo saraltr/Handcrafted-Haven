@@ -6,7 +6,7 @@ export const LogoutButton = () => {
     return(
         <button onClick={
             async () => {
-                await signOut()
+                await signOut({ callbackUrl: '/' })
             }
         } >Logout </button>
     )

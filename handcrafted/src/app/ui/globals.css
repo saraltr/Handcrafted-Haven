@@ -143,12 +143,15 @@ footer {
   position: relative;
   text-align: center;
   overflow: hidden;
-  background-color: #3c000034;
+  background-color: #4051421e;
   padding: 3.5rem;
 }
+
 .bannerContainer h1 {
   font-size: 2.5rem;
+  color: var(--dark-brown);
 }
+
 .bannerImg {
   position: relative;
   height: 450px;
@@ -225,42 +228,4 @@ button:hover {
 
 button:hover .arrowIcon {
   transform: translateX(0.3em);
-}
-
-/* register form */
-
-#registrationForm {
-  /* background-color: var(--deep-blue); */
-  width: 80%;
-  margin: auto;
-  /* color: var(--light-background); */
-  padding: 1rem;
-  border-radius: 10px;
-
-}
-
-
-form input,
-textarea {
-  display: block;
-  width: 100%;
-  padding: 5px;
-}
-
-form :required:invalid {
-  border: 2px solid #ce2029;
-}
-
-form :required:valid {
-  background-color: #dff0d8;
-  border: solid 2px #228b22;
-}
-
-label {
-  display: block;
-  margin: 1rem 0;
-}
-
-form select {
-  display: block;
 }

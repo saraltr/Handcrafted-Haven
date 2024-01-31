@@ -1,12 +1,13 @@
 import { Metadata } from "next";
 import Banner from "@/app/ui/banner"
 import bannerImg from "@/public/images/banner2.jpg"
+import { LoginButton } from "../ui/loginButton";
 
 export const metadata: Metadata = {
-  title: "Login"
+  title: "Register"
 };
  
-export default function LoginPage() {
+export default function RegisterPage() {
   return (
     <main>
         <Banner
@@ -14,12 +15,10 @@ export default function LoginPage() {
             title="Join us"
         >
         </Banner>
-      <div>
-        <div>
-          <div>
-          </div>
-        </div>
-      </div>
+      <section>
+        <h2>Log In</h2>
+        <LoginButton></LoginButton>
+      </section>
     </main>
   );
 }

@@ -9,8 +9,6 @@ export default async function Page() {
   const nb1 = 35452;
   const nb2 = 11544;
 
-  const session = await getServerSession(authConfig)
-
   return (
     <main>
       <Banner
@@ -23,7 +21,7 @@ export default async function Page() {
         desc2="Registered Creators"
         buttonText={
           <div className="btnContainer">
-            Register Now
+            Login Now
             <ArrowRightIcon className="arrowIcon" />
           </div>
         }

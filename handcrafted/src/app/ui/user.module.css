@@ -1,0 +1,29 @@
+.userProfileCard {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.userAvatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: solid 2px #405142;
+}
+
+.userInfo {
+    flex: 1;
+}
+
+.userName {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.userEmail {
+    color: #666;
+    margin-bottom: 16px;
+}
