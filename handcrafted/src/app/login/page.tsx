@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Banner from "@/app/ui/banner"
 import bannerImg from "@/public/images/banner2.jpg"
+import { LoginButton } from "../ui/loginButton";
 
 export const metadata: Metadata = {
   title: "Login"
@@ -14,12 +15,10 @@ export default function LoginPage() {
             title="Join us"
         >
         </Banner>
-      <div>
-        <div>
-          <div>
-          </div>
-        </div>
-      </div>
+      <section className="loginContainer">
+        <h2>Use Auth0 or Github to Log In</h2>
+        <LoginButton></LoginButton>
+      </section>
     </main>
   );
 }

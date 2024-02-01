@@ -4,9 +4,10 @@ import Banner from "@/app/ui/banner";
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import bannerImage from "@/public/images/banner1.jpg";
 import Search from "@/app/ui/search";
+import CardHolder  from '@/app/ui/cards';
 
 // Define the Page component
-export default function Page() {
+export default async function Page() {
   // Define constants for the number of orders delivered and registered creators
   const nb1 = 35452;
   const nb2 = 11544;
@@ -26,13 +27,14 @@ export default function Page() {
         buttonText={
           // Render a div containing the text "Register Now" and an arrow icon
           <div className="btnContainer">
-            Register Now
+            Login Now
             <ArrowRightIcon className="arrowIcon" />
           </div>
         }
       />
       {/* Render the Search component */}
       <Search />
+      <CardHolder />
     </main>
   );
 }

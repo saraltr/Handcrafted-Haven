@@ -1,12 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: {
-        template: '%s | Handcrafted Haven',
-        default: 'Handcrafted Haven',
-    },
-    description: 'Terms and Conditions.',
-};
+    title: 'Terms',
+  };
 
 export default function TermsPage() {
     return (

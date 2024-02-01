@@ -2,12 +2,8 @@ import { Metadata } from 'next';
 import styles from '../footer.module.css'
 
 export const metadata: Metadata = {
-    title: {
-        template: '%s | Handcrafted Haven',
-        default: 'Handcrafted Haven',
-    },
-    description: 'Privacy Policy.',
-};
+    title: 'Privacy Policy',
+  };
 
 export default function PrivacyPage() {
     return (
