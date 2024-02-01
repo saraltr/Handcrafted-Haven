@@ -4,15 +4,15 @@ import bannerImg from "@/public/images/banner4.jpg";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Profile"
+  title: "Seller"
 };
 
-export default function Profile() {
+export default function Seller() {
     return (
         <main>
             <Banner
             bannerImage={bannerImg}
-            title="User Profile"
+            title="Seller Profile"
             ></Banner>
             <User></User>
         </main>
