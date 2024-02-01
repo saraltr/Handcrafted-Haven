@@ -4,6 +4,7 @@ import Banner from "@/app/ui/banner";
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import bannerImage from "@/public/images/banner1.jpg";
 import Search from "@/app/ui/search";
+import CardHolder  from '@/app/ui/cards';
 
 // Define the Page component
 export default function Page() {
@@ -33,6 +34,7 @@ export default function Page() {
       />
       {/* Render the Search component */}
       <Search />
+      <CardHolder />
     </main>
   );
 }

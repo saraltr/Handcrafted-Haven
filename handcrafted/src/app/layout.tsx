@@ -13,8 +13,6 @@ export const metadata: Metadata = {
   description: 'Handcrafted Haven is a place for handcrafted goods.',
 };
 
-
-
 export default function RootLayout({
   children,
 }: {

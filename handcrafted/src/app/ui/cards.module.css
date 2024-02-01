@@ -1,0 +1,47 @@
+.outline {
+    background: var(--main-green);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.cards {
+    background: var(--deep-blue);
+    border-radius: 12px;
+    border: 2px solid var(--dark-brown);
+    padding: 10px;
+    margin: 10px;
+}
+
+.cardHeader {
+    background: var(--light-background);
+    padding: 5px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cardImageOutline {
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.cardImage {
+    border: 2px solid var(--dark-brown);
+    border-radius: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardPrice {
+    font-weight: bold;
+    font-size: large;
+    padding: 5px;
+    text-align: center;
+}
+
+.linkInfo {
+    color: var(--dark-brown);
+    font-weight: bold;
+    font-size: medium;
+}
