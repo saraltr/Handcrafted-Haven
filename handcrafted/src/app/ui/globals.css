@@ -131,12 +131,15 @@ footer {
   position: relative;
   text-align: center;
   overflow: hidden;
-  background-color: #3c000034;
+  background-color: #4051421e;
   padding: 3.5rem;
 }
+
 .bannerContainer h1 {
   font-size: 2.5rem;
+  color: var(--dark-brown);
 }
+
 .bannerImg {
   position: relative;
   height: 450px;
@@ -213,4 +216,26 @@ button:hover {
 
 button:hover .arrowIcon {
   transform: translateX(0.3em);
+}
+
+/* login */
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border: solid 2px var(--dark-brown);
+  width:fit-content;
+  margin: 5rem auto;
+  border-radius: 1rem;
+  background-color: #3c00000e;
+}
+
+.loginContainer button {
+  background-color: var(--ligther-green);
+  margin-top: 1rem;
+}
+
+.loginContainer button:hover {
+  background-color: var(--main-green);
 }
