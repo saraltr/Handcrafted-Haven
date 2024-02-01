@@ -3,8 +3,7 @@ import { getServerSession } from "next-auth";
 import Image from "next/image";
 import { LogoutButton } from "./logoutButton";
 import React from 'react';
-import styles from '@/app/ui/user.module.css'
-
+import styles from '@/app/ui/user.module.css';
 
 export const User = async () => {
     const session = await getServerSession(authConfig)

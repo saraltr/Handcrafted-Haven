@@ -4,10 +4,10 @@ import bannerImg from "@/public/images/banner2.jpg"
 import { LoginButton } from "../ui/loginButton";
 
 export const metadata: Metadata = {
-  title: "Register"
+  title: "Login"
 };
  
-export default function RegisterPage() {
+export default function LoginPage() {
   return (
     <main>
         <Banner
@@ -15,8 +15,8 @@ export default function RegisterPage() {
             title="Join us"
         >
         </Banner>
-      <section>
-        <h2>Log In</h2>
+      <section className="loginContainer">
+        <h2>Use Auth0 or Github to Log In</h2>
         <LoginButton></LoginButton>
       </section>
     </main>

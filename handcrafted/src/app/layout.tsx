@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./ui/globals.css";
 import { playpen } from '@/app/ui/fonts/fonts';
 import Link from 'next/link';
+import { UserProvider } from '@auth0/nextjs-auth0/client';
 
 export const metadata: Metadata = {
   title: {
@@ -18,6 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <UserProvider>
       <body className={`${playpen.className}`}>
         {children}
         <footer>
@@ -28,6 +30,7 @@ export default function RootLayout({
           </div>
         </footer>
       </body>
+      </UserProvider>
     </html>
   );
 }
