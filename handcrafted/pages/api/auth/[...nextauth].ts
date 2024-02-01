@@ -38,9 +38,9 @@ export const authConfig = {
             return baseUrl
         }
     },
-    pages: {
-        signIn: "/api/auth/sigin",
-    }, 
+    // pages: {
+    //     signIn: "/api/auth/sigin",
+    // }, 
     adapter: PrismaAdapter(prisma) as Adapter
 } satisfies NextAuthOptions;
 
