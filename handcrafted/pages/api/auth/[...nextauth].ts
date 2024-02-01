@@ -37,6 +37,9 @@ export const authConfig = {
             else if (new URL(url).origin === baseUrl) return url
             return baseUrl
         }
+    },
+    pages: {
+        signIn: "/api/auth/sigin",
     }, 
     adapter: PrismaAdapter(prisma) as Adapter
 } satisfies NextAuthOptions;
