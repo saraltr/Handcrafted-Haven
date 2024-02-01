@@ -97,10 +97,6 @@ h6 {
   color: var(--main-green);
 }
 
-body {
-  background: var(--light-background);
-}
-
 a {
   color: inherit;
   text-decoration: none;
