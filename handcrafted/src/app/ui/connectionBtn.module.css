@@ -1,0 +1,28 @@
+.loginBtn,
+.btnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowIcon {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.2em;
+    transition: transform 0.2s ease;
+}
+
+button:hover .arrowIcon {
+    transform: translateX(0.3em);
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fcf0f0ba;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
