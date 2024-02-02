@@ -27,8 +27,8 @@ function ConnectionContent() {
   }
 
   return (
-    <div className="btnContainer">
-      <button className="loginBtn" onClick={() => signIn(undefined, { callbackUrl: '/seller' })} >Login Now <ArrowRightIcon className="arrowIcon" /></button>
+    <div className={styles.btnContainer}>
+      <button className={styles.loginBtn} onClick={() => signIn(undefined, { callbackUrl: '/seller' })} >Login Now <ArrowRightIcon className="arrowIcon" /></button>
     </div>
   );
 }
