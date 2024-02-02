@@ -95,6 +95,11 @@ h5,
 h6 {
   font-family: var(--headline-font);
   color: var(--main-green);
+  padding: 5px;
+}
+
+p {
+  padding: 5px;
 }
 
 a {
@@ -119,6 +124,20 @@ footer {
 
 .footer-container a:not(:last-child) {
   margin-right: 15px;
+}
+
+dt {
+  font-weight: bold;
+  padding: 5px;
+}
+
+dd {
+  margin-left: 10px;
+  padding: 5px;
+}
+
+li  {
+  margin-left: 40px;
 }
 
 /* banner */

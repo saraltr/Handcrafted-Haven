@@ -9,8 +9,10 @@ export default function CardHolder() {
         <div className={styles.outline}>
             <Card title="" image="" price={20} />
             <Card title="" image="" price={20} />
+            <Card title="" image="" price={20} />
+            <Card title="" image="" price={20} />
         </div>
-        <p className={styles.linkInfo}>Click on the title to see more information about the product.</p>
+        <p className={styles.linkInfo}>** Click on the title to see more information about the product. **</p>
         </>
     );
 }
