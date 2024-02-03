@@ -4,7 +4,8 @@ import Banner from "../ui/banner";
 import bannerImg from "@/public/images/banner4.jpg";
 
 export const metadata: Metadata = {
-    title: "Seller"
+    title: "Seller",
+    description: 'See your products and add new ones',
   };
 
 export default function Seller() {
@@ -16,5 +17,5 @@ export default function Seller() {
             ></Banner>
             <User></User>
         </main>
-    )
+    );
 }
