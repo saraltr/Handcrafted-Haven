@@ -1,4 +1,3 @@
-// Import necessary modules and components
 import React from "react";
 import Banner from "@/app/ui/banner";
 import bannerImage from "@/public/images/banner1.jpg";
