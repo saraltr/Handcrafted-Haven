@@ -1,14 +1,14 @@
 
 .searchContainer {
   max-width: 700px; 
-  margin: 20px auto; /* Center the search bar */
+  margin: 20px auto; /* Centers the search bar */
   display: flex;
   flex-wrap: wrap; 
   gap: 10px; 
   justify-content: center;
   align-items: center;
-  background-color: #f8f8f8; /* Background color of the search bar */
-  border: 1px solid #ddd; /* Border for the search bar */
+  background-color: #f8f8f8; 
+  border: 1px solid #ddd; 
   border-radius: 5px; 
   padding: 15px;
 }
@@ -42,7 +42,7 @@
 }
 
 .searchButton:hover {
-  background-color: #6d9c80; /* Button hover color */
+  background-color: #6d9c80; 
 }
 
 @media (max-width: 768px) {
