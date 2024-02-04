@@ -16,7 +16,7 @@ export default function LoginPage() {
         >
         </Banner>
       <section className="loginContainer">
-        <h2>Use Auth0 or Github to Log In</h2>
+        <h2>Use Auth0 to Log In</h2>
         <LoginButton></LoginButton>
       </section>
     </main>

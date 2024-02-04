@@ -1,7 +1,5 @@
-// Import necessary modules and components
 import React from "react";
 import Banner from "@/app/ui/banner";
-import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import bannerImage from "@/public/images/banner1.jpg";
 import Search from "@/app/ui/search";
 import CardHolder  from '@/app/ui/cards';
@@ -24,13 +22,7 @@ export default async function Page() {
         desc1="Orders Delivered"
         nb2={nb2.toLocaleString("en-US")} // Convert the number of creators to a string with a US locale
         desc2="Registered Creators"
-        buttonText={
-          // Render a div containing the text "Register Now" and an arrow icon
-          <div className="btnContainer">
-            Login Now
-            <ArrowRightIcon className="arrowIcon" />
-          </div>
-        }
+        button={true}
       />
       {/* Render the Search component */}
       <Search />

@@ -1,19 +1,20 @@
 import React, { ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import Connection from "./connectionButton";
 
 interface BannerProps {
   bannerImage: StaticImageData;
   title?: string;
   subtitle?: string;
-  buttonText?: ReactNode;
+  button?: boolean;
   nb1?: string;
   desc1?: string;
   nb2?: string;
   desc2?: string;
 }
 
-const Banner: React.FC<BannerProps> = ({ bannerImage, title, subtitle, buttonText, nb1, desc1, nb2, desc2 }) => {
+const Banner: React.FC<BannerProps> = ({ bannerImage, title, subtitle, button, nb1, desc1, nb2, desc2 }) => {
   const hasInfoContent = nb1 || desc1 || nb2 || desc2;
 
   return (
@@ -35,10 +36,8 @@ const Banner: React.FC<BannerProps> = ({ bannerImage, title, subtitle, buttonTex
           </div>
         </div>
       )}
-      {buttonText && (
-        <Link href="/login">
-          <button>{buttonText}</button>
-        </Link>
+      {button && (
+        <Connection></Connection>
       )}
     </section>
   );
