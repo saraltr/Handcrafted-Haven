@@ -66,13 +66,15 @@
     background-color: var(--light-background) ; 
     padding: 15px 40px; 
     display: flex; 
+
   }
   
   .navbarLinks {
     display: flex; 
     gap: 200px; 
-    justify-content: flex-end;
     background-color: var(--dark-brown);
+    align-items: center;
+    margin-left: auto;
   }
   
   .logoContainer {
@@ -83,7 +85,6 @@
     text-decoration: none; 
     font-size: 25px; 
     font-weight: 500; 
-    align-content: center;
   }
   
   .navbarLinks a:hover {
