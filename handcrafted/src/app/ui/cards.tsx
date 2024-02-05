@@ -18,7 +18,7 @@ export default function CardHolder() {
 }
 
 
-{/*David -  i adjusted this Card function so that the image is clickable and routes to the Products page*/}
+
 export function Card({
     title,
     image,

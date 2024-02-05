@@ -1,0 +1,42 @@
+
+.contactContainer {
+    min-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .contactForm label {
+    margin-bottom: 5px;
+  }
+  
+ 
+.contactForm input,
+.contactForm textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+  
+  .contactForm button {
+    background-color: #3c0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contactForm button:hover {
+    background-color: #6d9c80;
+  }
+  

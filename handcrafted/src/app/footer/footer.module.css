@@ -66,15 +66,17 @@
     background-color: var(--light-background) ; 
     padding: 15px 40px; 
     display: flex; 
+   
 
   }
   
   .navbarLinks {
     display: flex; 
     gap: 200px; 
-    background-color: var(--dark-brown);
+    background-color: var(--dark-brown); 
     align-items: center;
     margin-left: auto;
+    
   }
   
   .logoContainer {
