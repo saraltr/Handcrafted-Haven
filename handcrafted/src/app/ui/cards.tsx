@@ -17,6 +17,8 @@ export default function CardHolder() {
     );
 }
 
+
+{/*David -  i adjusted this Card function so that the image is clickable and routes to the Products page*/}
 export function Card({
     title,
     image,
@@ -28,19 +30,25 @@ export function Card({
 }) {
     return (
         <div className={styles.cards}>
-            <Link
-                href='/app/product'>
+            {/* Direct Link usage for the title */}
+            <Link href='/products'>
                 <h3 className={styles.cardHeader}>{title}</h3>
             </Link>
-            <div className={`${styles.cardImageOutline} items-center`}>
-                <Image
-                    src={image}
-                    alt={title}
-                    className={styles.cardImage}
-                    width={200}
-                    height={200}/>
-            </div>
+            {/* Direct Link usage for the image */}
+            <Link href='/products'>
+                <div className={`${styles.cardImageOutline} items-center`}>
+                    <Image
+                        src={image}
+                        alt={title}
+                        className={styles.cardImage}
+                        width={200}
+                        height={200}
+                        layout="intrinsic"
+                    />
+                </div>
+            </Link>
             <p className={`${playpen.className} ${styles.cardPrice}`}>{`Price: $${price}`}</p>
         </div>
     );
 }
+
