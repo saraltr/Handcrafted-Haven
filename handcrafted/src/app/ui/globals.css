@@ -107,6 +107,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: var(--light-background);
+}
+
 /* Footer Styles */
 footer {
   padding: 20px;

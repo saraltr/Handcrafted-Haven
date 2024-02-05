@@ -38,7 +38,7 @@
     font-size: large;
     padding: 5px;
     text-align: center;
-
+    color: var(--light-background);
 }
 
 .linkInfo {
