@@ -63,28 +63,32 @@
 
 /*use the below to style the navbar. Already imported the styles in the appropriate pages*/
   .navbarContainer {
-    background-color: #333; 
+    background-color: var(--light-background) ; 
     padding: 15px 40px; 
     display: flex; 
-    justify-content: flex-end;
   }
   
-  .navbar-links {
+  .navbarLinks {
     display: flex; 
     gap: 200px; 
- 
- 
+    justify-content: flex-end;
+    background-color: var(--dark-brown);
   }
   
-  .navbar-links a {
-    color: white; 
+  .logoContainer {
+    margin-right: 20px;
+  }
+  .navbarLinks a {
+    color: var(--light-background); 
     text-decoration: none; 
-    font-size: 18px; 
+    font-size: 25px; 
     font-weight: 500; 
+    align-content: center;
   }
   
-  .navbar-links a:hover {
-    color: #ddd; 
+  .navbarLinks a:hover {
+    color: var(--light-background); 
+    background-color: var(--main-green);
     border-bottom: 2px solid #ddd; 
   }
   

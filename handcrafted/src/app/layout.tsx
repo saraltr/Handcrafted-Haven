@@ -6,7 +6,7 @@ import { UserProvider } from '@auth0/nextjs-auth0/client';
 import Copyright from './footer/Copyright'; {/*for the Copyright in the footer*/}
 import styles from './footer/footer.module.css'; {/*To style the footer*/}
 import Image from 'next/image'; {/*For the logo in the navbar*/}
-
+import logo from '@/public/transparentlogo.png';
 
 export const metadata: Metadata = {
   title: {
@@ -29,10 +29,9 @@ export default function RootLayout({
             {/* Navigation Bar - Adjusted to include a logo */}
             <nav className={styles.navbarContainer}>
               <div className={styles.logoContainer}>
-                {/*<Link href="/">
-                  
-                  { <Image src="" alt="Logo" width={100} height={50} /> }
-  </Link>  */}
+                <Link href="/">
+                  <Image src={logo} alt="Handcrafted Haven Logo" width={200} height={68} />
+                </Link>
               </div>
               <div className={styles.navbarLinks}>
                 <Link href="/">Home</Link>
@@ -49,6 +48,9 @@ export default function RootLayout({
                 <Link href="/footer/terms">Terms and Conditions</Link>
                 <Link href="/footer/privacy">Privacy Policy</Link>
                 <Link href="/footer/faq">FAQs</Link>
+              </div>
+              <div>
+                <Copyright />
               </div>
             </footer>
           </div>
