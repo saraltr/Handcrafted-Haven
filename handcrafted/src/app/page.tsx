@@ -24,6 +24,7 @@ export default async function Page() {
       />
       {/* Render the Search component */}
       <Search />
+      {/* top 5 best rated products cardholder component */}
       <CardHolder></CardHolder>
     </main>
   );

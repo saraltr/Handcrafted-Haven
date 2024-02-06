@@ -75,6 +75,8 @@
     background-color: var(--dark-brown);
     align-items: center;
     margin-left: auto;
+    padding: .5rem;
+    border-radius: 10px;
   }
   
   .logoContainer {

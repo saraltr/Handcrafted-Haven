@@ -43,8 +43,9 @@
     text-align: center;
     background-color: var(--light-background);
     width: fit-content;
-    margin: auto;
+    margin: .5rem auto;
     border-radius: 8px;
+    font-size:medium;
 }
 
 .linkInfo {

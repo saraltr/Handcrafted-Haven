@@ -68,7 +68,7 @@ export const CardHolder: FC = () => {
 }
 
 export const Card: FC<CardHolderProps> = ({ productList }) => {
-  console.log(productList);
+  // console.log(productList);
     return (
       <>
         {productList.map(({ id, name, image, pricing }) => (
@@ -85,7 +85,7 @@ export const Card: FC<CardHolderProps> = ({ productList }) => {
                     height={200}/>
             </div>
             </Link>
-            <h5 className={`${styles.cardPrice}`}>{`Price: $${pricing}`}</h5>
+            <h5 className={`${styles.cardPrice}`}>{`$${pricing}`}</h5>
         </div>
         ))}
       </>
