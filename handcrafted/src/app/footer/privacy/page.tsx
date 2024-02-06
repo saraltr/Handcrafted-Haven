@@ -11,7 +11,7 @@ export default function PrivacyPage() {
         <h1 className={styles.title}>Privacy Policy</h1>
   
         <h2 className={styles.sectionTitle}>Introduction</h2>
-        <p className={styles.paragraph}>At Handcrafted Haven, accessible from [will replace with actual URL when deployed], one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Handcrafted Haven and how we use it.</p>
+        <p className={styles.paragraph}>At Handcrafted Haven, accessible from https://handcrafted-haven-azure.vercel.app/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Handcrafted Haven and how we use it.</p>
   
         <h2 className={styles.sectionTitle}>Consent</h2>
         <p className={styles.paragraph}>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
