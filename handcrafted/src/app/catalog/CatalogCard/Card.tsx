@@ -19,7 +19,6 @@ interface CardHolderProps {
 }
 
 const Card: FC<CardHolderProps> = ({ productList }) => {
-  console.log(productList);
   return (
     <div className={styles.card}>
       {productList.map(({ id, name, image, description, pricing, category }) => (
@@ -27,7 +26,7 @@ const Card: FC<CardHolderProps> = ({ productList }) => {
           <span className={styles.cat}>Category/{category}</span>
           <Link
             href={`/product/${id}?product=${name}`}>
-            <Image src={`/public/images/products${image}`} alt={name} className={styles.cardImage} width={260} height={280} />
+            <Image src={`/public/images/products${image}`} alt={`${name} image`} className={styles.cardImage} width={260} height={280} />
             <h2 className={styles.cardTitle}>{name}</h2>
           </Link>
           <p className={styles.cardDescription}>{description}</p>
