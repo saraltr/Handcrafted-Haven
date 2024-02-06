@@ -21,6 +21,7 @@
 .userName {
     margin-bottom: 8px;
     font-size: 1.5rem;
+    text-align: left;
 }
 
 .userEmail {

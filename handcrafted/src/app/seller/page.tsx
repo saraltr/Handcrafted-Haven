@@ -19,10 +19,10 @@ export default function Seller() {
             ></Banner>
             <User></User>
             <div>
-                <h1 className={styles.sellerHeader}>Your Added Products</h1>
+                <h3 className={styles.sellerHeader}>Your Added Products</h3>
             </div>
             <div>
-                <h1 className={styles.sellerHeader}>Add Your Product</h1>
+                <h4 className={styles.sellerHeader}>Add Your Product</h4>
                 <ProductForm />
             </div>
         </main>
