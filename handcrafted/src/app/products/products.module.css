@@ -1,0 +1,11 @@
+.products {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to next line when necessary */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text within each product */
+    gap: 20px; /* Add space between products */
+  }
+  .h1{
+    text-align: center;
+  }
