@@ -26,7 +26,6 @@ export default async function Page() {
       />
       {/* Render the Search component */}
       <Search />
-      <CardHolder />
     </main>
   );
 }
