@@ -40,10 +40,37 @@
     color: var(--light-background);
 }
 
-.contactFieldset input:required {
+.contactFieldset input:required, .contactFieldset textarea:required {
     border-left: solid 6px rgba(0,0,0,0.3);
 }
 
 .contactButton {
     margin-top: 2rem;
+}
+
+.contactSection {
+    background-color: var(--main-green);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    max-width: 50rem;
+    margin-top: 4rem;
+    border-radius: 12px;
+}
+
+.contactSection2 {
+    background-color: var(--deep-blue);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border: 3px solid var(--dark-brown);
+    border-radius: 12px;
+}
+
+.contactCard {
+    background-color: var(--light-background);
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid var(--dark-brown);
+    border-radius: 12px;
 }

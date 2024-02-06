@@ -1,0 +1,54 @@
+.formPage {
+    text-align: center;
+}
+
+.addProductForm {
+    display: block;
+    margin: 10px;
+}
+
+.productFieldset {
+    display: block;
+    border: 4px solid var(--dark-brown);
+    border-radius: 12px;
+    background-color: var(--deep-blue);
+    padding: 5px;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.productLegend {
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.productFieldset label {
+    text-align: left;
+    display: block;
+    color: var(--light-background);
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+.productFieldset input, .productFieldset textarea {
+    display: block;
+    font-size: 1rem;
+    border: 3px solid var(--dark-brown);
+    border-radius: 12px;
+    padding: 0.75rem;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 90%;
+    max-width: 30rem;
+    background-color: var(--ligther-green);
+    color: var(--light-background);
+}
+
+.productFieldset input:required, .productFieldset textarea:required {
+    border-left: solid 6px rgba(0,0,0,0.3);
+}
+
+.productButton {
+    margin-top: 2rem;
+}
