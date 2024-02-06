@@ -87,6 +87,11 @@
   margin: 0;
 }
 
+body {
+  font-size: large;
+  text-align: center;
+}
+
 h1,
 h2,
 h3,
@@ -214,7 +219,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--main-green);
+  background-color: var(--ligther-green);
 }
 
 
