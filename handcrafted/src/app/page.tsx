@@ -2,15 +2,13 @@ import React from "react";
 import Banner from "@/app/ui/banner";
 import bannerImage from "@/public/images/banner1.jpg";
 import Search from "@/app/ui/search";
-import CardHolder  from '@/app/ui/cards';
+import { CardHolder } from "./ui/cards";
 
-// Define the Page component
 export default async function Page() {
   // Define constants for the number of orders delivered and registered creators
   const nb1 = 35452;
   const nb2 = 11544;
 
-  // Return the JSX to render for this component
   return (
     <main>
       {/* Render the Banner component with the given props */}
@@ -26,7 +24,7 @@ export default async function Page() {
       />
       {/* Render the Search component */}
       <Search />
-      <CardHolder />
+      <CardHolder></CardHolder>
     </main>
   );
 }
