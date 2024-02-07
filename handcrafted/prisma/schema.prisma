@@ -67,9 +67,11 @@ model Product {
   description String
   pricing     Float
   image       String
-  seller      Json
-  reviews     Json?
+  seller      String
+  reviews     Json[]
   category    String
+  material    String
+  sizes       String
 
   @@map("products")
 }
