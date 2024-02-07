@@ -25,7 +25,7 @@ export const User = async () => {
                 className={styles.userAvatar}
             />
             <div className={styles.userInfo}>
-                <h2 className={styles.userName}>{session.user.name}</h2>
+                <h2 className={styles.userName}>{`Welcome back ${session.user.name}!`}</h2>
                 <p className={styles.userEmail}>{session.user.email}</p>
                 <LogoutButton />
             </div>

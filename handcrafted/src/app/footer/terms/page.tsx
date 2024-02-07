@@ -10,7 +10,7 @@ export default function TermsPage() {
             <h1>Terms and Conditions</h1>
 
             <h2>Introduction</h2>
-            <p>Welcome to Handcrafted Haven! These Terms and Conditions outline the rules and regulations for the use of Handcrafted Havens Website, located at [will replace with actual URL when deployed].</p>
+            <p>Welcome to Handcrafted Haven! These Terms and Conditions outline the rules and regulations for the use of Handcrafted Havens Website, located at https://handcrafted-haven-azure.vercel.app.</p>
             <p>By accessing this website, we assume you accept these terms and conditions. Do not continue to use Handcrafted Haven if you do not agree to take all of the terms and conditions stated on this page.</p>
 
             

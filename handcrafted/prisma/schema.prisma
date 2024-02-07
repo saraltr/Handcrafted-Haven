@@ -61,10 +61,15 @@ model VerificationToken {
   @@map("verification_tokens")
 }
 
-// model Product {
-//   id          String @id @default(auto()) @map("_id") @db.ObjectId
-//   name        String
-//   description String
-//   creator     String
-//   price       Float
-// }
+model Product {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  description String
+  pricing     Float
+  image       String
+  seller      Json
+  reviews     Json?
+  category    String
+
+  @@map("products")
+}
