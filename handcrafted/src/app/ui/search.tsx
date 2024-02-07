@@ -1,7 +1,7 @@
-// Search.tsx (Updated with price filtering and styles)
+
 'use client';
 import React, { useState } from 'react';
-import styles from './search.module.css'; // Make sure this path is correct
+import styles from './search.module.css'; 
 
 interface SearchProps {
   categories: string[];
