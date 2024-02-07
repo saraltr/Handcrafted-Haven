@@ -1,6 +1,7 @@
-// Search.tsx (Updated with price filtering)
+// Search.tsx (Updated with price filtering and styles)
 'use client';
 import React, { useState } from 'react';
+import styles from './search.module.css'; // Make sure this path is correct
 
 interface SearchProps {
   categories: string[];
@@ -18,8 +19,8 @@ const Search: React.FC<SearchProps> = ({ categories, onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+    <form onSubmit={handleSubmit} className={styles.searchContainer}>
+      <select value={category} onChange={(e) => setCategory(e.target.value)} className={styles.filterSelect}>
         <option value="">Select Category</option>
         {categories.map((cat) => (
           <option key={cat} value={cat}>{cat}</option>
@@ -30,14 +31,16 @@ const Search: React.FC<SearchProps> = ({ categories, onSearch }) => {
         placeholder="Min Price"
         value={minPrice}
         onChange={(e) => setMinPrice(e.target.value)}
+        className={styles.priceInput}
       />
       <input
         type="number"
         placeholder="Max Price"
         value={maxPrice}
         onChange={(e) => setMaxPrice(e.target.value)}
+        className={styles.priceInput}
       />
-      <button type="submit">Search</button>
+      <button type="submit" className={styles.searchButton}>Search</button>
     </form>
   );
 };
