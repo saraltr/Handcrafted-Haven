@@ -43,13 +43,13 @@ const ProductCard: FC<ProductProps> = ({ productInfo }) => {
         <div key={product.id}>
           <span className={styles.category}>Category/{product.category}</span>
           <h1 className={styles.productName}>{product.name}</h1>
-          {/* <Image
-            src={`/products${product.image}`}
+          <Image
+            src={product.image}
             alt={`${product.name} image`}
             width={400}
             height={400}
             className={styles.productImage}
-          ></Image> */}
+          ></Image>
           <h2 className={styles.seller}>Seller: {product.seller}</h2>
           <div className={styles.details}>
             <ul>

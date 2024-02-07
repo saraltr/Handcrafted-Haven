@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import Banner from "@/app/ui/banner";
-import bannerImage from "@/public/images/banner1.jpg";
+import bannerImage from "../../public/images/banner1.jpg";
 import Search from "@/app/ui/search";
 import { CardHolder } from "./ui/cards";
 

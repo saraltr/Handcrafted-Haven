@@ -6,7 +6,7 @@ import { UserProvider } from '@auth0/nextjs-auth0/client';
 import Copyright from './footer/Copyright'; {/*for the Copyright in the footer*/}
 import styles from './footer/footer.module.css'; {/*To style the footer*/}
 import Image from 'next/image'; {/*For the logo in the navbar*/}
-import logo from '@/public/transparentlogo.png';
+import logo from "../../public//transparentlogo.png";
 
 export const metadata: Metadata = {
   title: {

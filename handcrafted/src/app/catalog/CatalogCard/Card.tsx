@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from './Card.module.css';
 import Link from 'next/link';
 import Search from "@/app/ui/search";
+import axios from 'axios';
 
 
 interface Products {
@@ -28,11 +29,11 @@ const Card: FC<CardHolderProps> = ({ productList }) => {
           <span className={styles.cat}>Category/{category}</span>
           <Link
             href={`/catalog/${id}`}>
-            <Image src={`/public/images/products${image}`} alt={`${name} image`} className={styles.cardImage} width={260} height={280} />
+            <Image src={image} alt={`${name} image`} className={styles.cardImage} width={260} height={280} />
             <h2 className={styles.cardTitle}>{name}</h2>
           </Link>
           <p className={styles.cardDescription}>{description}</p>
-          <p className={styles.price}>{pricing}</p>
+          <p className={styles.price}>{`$${pricing}`}</p>
         </div>
       ))}
     </div>
@@ -48,14 +49,14 @@ const CatalogCard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/products');
-        if (response.ok) {
-          const data = await response.json();
+        const response = await axios.get('/api/products');
+        const data = response.data;
+        
+        if (data) {
           setProducts(data);
 
-          
-          const extractedCategories: string[] = Array.from(new Set(data.map((product: Products) => product.category) as string[]));
-setCategories(extractedCategories);
+          const extractedCategories: string[] = Array.from(new Set(data.map((product: Products) => product.category)));
+          setCategories(extractedCategories);
         } else {
           throw new Error('Failed to fetch products');
         }

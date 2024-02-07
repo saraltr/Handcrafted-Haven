@@ -4,7 +4,7 @@ import { LogoutButton } from "./logoutButton";
 import React from 'react';
 import styles from '@/app/ui/user.module.css';
 import { authConfig } from "../../../pages/api/auth/[...nextauth]";
-import defaultImage from "@/public/images/blank-profile-picture.png"
+import defaultImage from "../../../public/images/blank-profile-picture.png";
 
 export const User = async () => {
     const session = await getServerSession(authConfig);

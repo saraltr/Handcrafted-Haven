@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Banner from "../ui/banner";
-import bannerImg from "@/public/images/banner2.jpg";
+import bannerImg from "../../../public/images/banner2.jpg";
 import styles from "@/app/ui/contacts/contacts.module.css";
 import Link from 'next/link';
 
