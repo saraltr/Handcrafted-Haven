@@ -92,12 +92,12 @@ export const Card: FC<CardHolderProps> = ({ productList }) => {
             <div className={`${styles.cardImageOutline} items-center`}>
               {image &&
                 <Image
-                  // loader={() => `/images/products/${image}`}
                     src={image}
                     alt={name}
                     className={styles.cardImage}
                     width={200}
-                    height={200}/>}
+                    height={200}/>
+              }
             </div>
             </Link>
             <h5 className={`${styles.cardPrice}`}>{`$${pricing}`}</h5>
