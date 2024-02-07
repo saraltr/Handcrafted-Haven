@@ -43,7 +43,7 @@ const Card: FC<CardHolderProps> = ({ productList }) => {
 const CatalogCard = () => {
   const [products, setProducts] = useState<Products[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<Products[]>([]);
-  const [categories, setCategories] = useState<string[]>([]); // Added this line
+  const [categories, setCategories] = useState<string[]>([]); 
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const CatalogCard = () => {
           const data = await response.json();
           setProducts(data);
 
-          // Extract and set categories
+          
           const extractedCategories: string[] = Array.from(new Set(data.map((product: Products) => product.category) as string[]));
 setCategories(extractedCategories);
         } else {
