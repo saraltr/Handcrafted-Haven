@@ -1,9 +1,11 @@
-"use client"
 
+'use client';
 import React, { FC, useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './Card.module.css';
 import Link from 'next/link';
+import Search from "@/app/ui/search";
+
 
 interface Products {
   id: string;
@@ -19,16 +21,16 @@ interface CardHolderProps {
 }
 
 const Card: FC<CardHolderProps> = ({ productList }) => {
-  console.log(productList);
   return (
     <div className={styles.card}>
       {productList.map(({ id, name, image, description, pricing, category }) => (
         <div key={id} className={styles.cardContent}>
           <span className={styles.cat}>Category/{category}</span>
-          <Link
-            href={`/product/${id}?product=${name}`}>
-            <Image src={`/public/images/products${image}`} alt={name} className={styles.cardImage} width={260} height={280} />
-            <h2 className={styles.cardTitle}>{name}</h2>
+          <Link href={`/product/${id}?product=${name}`}>
+            
+              <Image src={`/public/images/products/${image}`} alt={name} className={styles.cardImage} width={260} height={280} />
+              <h2 className={styles.cardTitle}>{name}</h2>
+            
           </Link>
           <p className={styles.cardDescription}>{description}</p>
           <p className={styles.price}>{pricing}</p>
@@ -38,32 +40,59 @@ const Card: FC<CardHolderProps> = ({ productList }) => {
   );
 };
 
-export default function CatalogCard() {
-    const [products, setProducts] = useState<Products[]>([]);
-    useEffect(() => {
+const CatalogCard = () => {
+  const [products, setProducts] = useState<Products[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<Products[]>([]);
+  const [categories, setCategories] = useState<string[]>([]); // Added this line
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch('/api/products');
         if (response.ok) {
           const data = await response.json();
           setProducts(data);
-          console.log(data);
+
+          // Extract and set categories
+          const extractedCategories: string[] = Array.from(new Set(data.map((product: Products) => product.category) as string[]));
+setCategories(extractedCategories);
         } else {
           throw new Error('Failed to fetch products');
         }
       } catch (error) {
         console.error(error);
+        setError('Failed to fetch products');
       }
     };
 
     fetchData();
   }, []);
 
+  const handleSearch = (category: string, minPrice: number, maxPrice: number) => {
+    const filtered = products.filter(product => {
+      return (
+        (category ? product.category === category : true) &&
+        product.pricing >= minPrice &&
+        (maxPrice ? product.pricing <= maxPrice : true)
+      );
+    });
+    setFilteredProducts(filtered);
+  };
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <>
-      <h1 className={styles.h1}>Catalog</h1>
-      <Card productList={products}
-      ></Card>
+      <h1>Your Catalog</h1>
+      
+      <Search categories={categories} onSearch={handleSearch} />
+
+      <Card productList={filteredProducts.length > 0 ? filteredProducts : products} />
     </>
   );
-}
+};
+
+export default CatalogCard;
