@@ -27,7 +27,7 @@ const Card: FC<CardHolderProps> = ({ productList }) => {
         <div key={id} className={styles.cardContent}>
           <span className={styles.cat}>Category/{category}</span>
           <Link
-            href={`/product/${id}?product=${name}`}>
+            href={`/catalog/${id}`}>
             <Image src={`/public/images/products${image}`} alt={`${name} image`} className={styles.cardImage} width={260} height={280} />
             <h2 className={styles.cardTitle}>{name}</h2>
           </Link>

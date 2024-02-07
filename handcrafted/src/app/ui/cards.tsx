@@ -16,7 +16,9 @@ interface Products {
 
 interface CardHolderProps {
   productList: Products[];
+  imageUrls: string[];
 }
+
 
 interface Review {
   username: string;
@@ -26,6 +28,8 @@ interface Review {
 
 export const CardHolder: FC = () => {
   const [products, setProducts] = useState<Products[]>([]);
+  const [images, setImages] = useState<string[]>([]); // state to store image URLs
+  const [loading, setLoading] = useState<boolean>(true); // state to track loading status
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,6 +42,10 @@ export const CardHolder: FC = () => {
           // display only the top 5 products
           const top5Products = sortedProducts.slice(0, 5);
           setProducts(top5Products);
+          // preload images
+          const imageUrls = top5Products.map((product: Products) => `/images/products${product.image}`);
+          setImages(imageUrls);
+          setLoading(false); // set loading to false after images are loaded
         } else {
           throw new Error('Failed to fetch products');
         }
@@ -60,7 +68,12 @@ export const CardHolder: FC = () => {
     <>
       <h3>Top 5 best rated</h3>
       <div className={styles.outline}>
-        <Card productList={products} />
+        {loading ? (
+          // show loader while images are loading
+          <div>Loading Products...</div>
+        ) : (
+          <Card productList={products} imageUrls={images} />
+        )}
       </div>
       <p className={styles.linkInfo}>** Click on the title to see more information about the product. **</p>
     </>
@@ -74,15 +87,17 @@ export const Card: FC<CardHolderProps> = ({ productList }) => {
         {productList.map(({ id, name, image, pricing }) => (
         <div key={id} className={styles.cards}>
             <Link
-                href={`/product/${id}?product=${name}`}>
+                href={`/catalog/${id}`}>
                 <h4 className={styles.cardHeader}>{name}</h4>
             <div className={`${styles.cardImageOutline} items-center`}>
+              {image &&
                 <Image
-                    src={`/public/images/products${image}`}
+                  // loader={() => `/images/products/${image}`}
+                    src={image}
                     alt={name}
                     className={styles.cardImage}
                     width={200}
-                    height={200}/>
+                    height={200}/>}
             </div>
             </Link>
             <h5 className={`${styles.cardPrice}`}>{`$${pricing}`}</h5>
