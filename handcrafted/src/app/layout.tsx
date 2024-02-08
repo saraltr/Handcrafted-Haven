@@ -33,7 +33,8 @@ export default function RootLayout({
                   <Image src={logo} alt="Handcrafted Haven Logo" width={200} height={68} />
                 </Link>
               </div>
-              <div className={styles.navbarLinks}>
+              <div className={`${styles.navbarLinks} ${styles.responsive}`}>
+                <Link className={styles.hamburger} href='#'>&#9776;</Link>
                 <Link href="/">Home</Link>
                 <Link href="/catalog">Catalog</Link>
                 <Link href="/seller">Profile</Link>

@@ -30,7 +30,7 @@ export default function Page() {
                         <textarea id="concern" name="concern" rows={10} cols={50} required/>
                     </fieldset>
                     <Link href="/success">
-                    <button type="submit" className={styles.contactButton}>Send Concern</button>
+                        <button type="submit" className={styles.contactButton}>Send Concern</button>
                     </Link>
                 </form>
                 <section className={styles.contactSection}>
@@ -51,7 +51,8 @@ export default function Page() {
                             <p>1(271)438-9705</p>
                             <hr />
                             <h3>Google Map</h3>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.1884511675553!2d-111.92846142485187!3d33.392247352292344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b0898db93d3fb%3A0x1e80446fa850822f!2s3303%20S%20Rural%20Rd%2C%20Tempe%2C%20AZ%2085282!5e0!3m2!1sen!2sus!4v1707170448602!5m2!1sen!2sus" width="400" height="300" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                            <Link className={styles.googleLink} href='https://maps.app.goo.gl/gqHfRqXpTMnTKieH6'>Google Map Link</Link>
+                            <iframe className={styles.googleMap} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.1884511675553!2d-111.92846142485187!3d33.392247352292344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b0898db93d3fb%3A0x1e80446fa850822f!2s3303%20S%20Rural%20Rd%2C%20Tempe%2C%20AZ%2085282!5e0!3m2!1sen!2sus!4v1707170448602!5m2!1sen!2sus" width="400" height="300" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </section>

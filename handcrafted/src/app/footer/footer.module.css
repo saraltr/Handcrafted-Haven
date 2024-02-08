@@ -1,98 +1,122 @@
 /* RootLayout.module.css */
 .pageWrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Make sure the wrapper fills at least the whole viewport height */
-  }
-  
-  .footerContainer {
-    background-color: #f8f8f8; /* Footer background color */
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #e7e7e7;
-    margin-top: auto; /* Push the footer to the bottom */
-  }
-  
-  .footerContainer a {
-    margin: 0 10px;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .footerContainer a:hover {
-    text-decoration: underline;
-  }
-  
-  .copyRight {
-    margin-top: 15px;
-    font-size: 12px;
-    color: #666;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make sure the wrapper fills at least the whole viewport height */
+}
 
-  /* PrivacyPage styling */
+.footerContainer {
+  background-color: #f8f8f8; /* Footer background color */
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footerContainer a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.footerContainer a:hover {
+  text-decoration: underline;
+}
+
+.copyRight {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #666;
+}
+
+
+/* PrivacyPage styling */
 .container {
-    padding: 20px;
-  }
-  
-  .title {
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .sectionTitle {
-    color: #555;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .paragraph {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
-  
-  .list {
-    margin-left: 20px;
-  }
-  
-  .listItem {
-    margin-bottom: 5px;
-  }
-  
+  padding: 20px;
+}
+
+.title {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.paragraph {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.list {
+  margin-left: 20px;
+}
+
+.listItem {
+  margin-bottom: 5px;
+}
+
 
 /*use the below to style the navbar. Already imported the styles in the appropriate pages*/
-  .navbarContainer {
-    background-color: var(--light-background) ; 
-    padding: 15px 40px; 
-    display: flex; 
-   
+.navbarContainer {
+  background-color: var(--light-background) ; 
+  padding: 15px 40px; 
+  display: flex; 
+}
 
-  }
-  
+.navbarLinks {
+  background-color: var(--dark-brown); 
+  align-items: center;
+  margin-left: auto;
+  padding: .5rem;
+  border-radius: 10px;
+}
+
+.logoContainer {
+  margin-right: 20px;
+}
+
+.navbarLinks a {
+  display: block;
+  color: var(--light-background); 
+  text-decoration: none; 
+  font-size: 25px; 
+  font-weight: 500; 
+}
+
+.navbarLinks a:hover {
+  color: var(--light-background); 
+  background-color: var(--main-green);
+  border-bottom: 2px solid #ddd; 
+}
+
+.navbarLinks a:first-child {
+  display: block;
+}
+
+.navbarLinks a {
+  display: none;
+}
+
+.responsive a {
+  display: block;
+}
+
+@media screen and (min-width: 70em) {
   .navbarLinks {
     display: flex; 
     gap: 200px; 
-    background-color: var(--dark-brown); 
-    align-items: center;
-    margin-left: auto;
-    padding: .5rem;
-    border-radius: 10px;
   }
-  
-  .logoContainer {
-    margin-right: 20px;
-  }
+
   .navbarLinks a {
-    color: var(--light-background); 
-    text-decoration: none; 
-    font-size: 25px; 
-    font-weight: 500; 
+    display: block;
   }
-  
-  .navbarLinks a:hover {
-    color: var(--light-background); 
-    background-color: var(--main-green);
-    border-bottom: 2px solid #ddd; 
+
+  .navbarLinks a:first-child {
+    display: none;
   }
-  
+}
