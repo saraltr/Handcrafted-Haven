@@ -37,7 +37,7 @@
     width: 90%;
     max-width: 30rem;
     background-color: var(--ligther-green);
-    color: var(--light-background);
+    color: black;
 }
 
 .contactFieldset input:required, .contactFieldset textarea:required {

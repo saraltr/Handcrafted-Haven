@@ -31,7 +31,7 @@ export default async function Seller() {
                 <h1 className={styles.sellerHeader}>Your Added Products</h1>
             </div>
             <div>
-                <h1 className={styles.sellerHeader}>Add Your Product</h1>
+                <h1 className={styles.sellerHeader}>Fill out form to add your product.</h1>
                 <ProductForm />
             </div>
         </main>
