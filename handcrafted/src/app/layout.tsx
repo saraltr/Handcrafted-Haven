@@ -7,6 +7,7 @@ import Copyright from './footer/Copyright'; {/*for the Copyright in the footer*/
 import styles from './footer/footer.module.css'; {/*To style the footer*/}
 import Image from 'next/image'; {/*For the logo in the navbar*/}
 import logo from "../../public//transparentlogo.png";
+import Navigation from "./ui/navigation";
 
 export const metadata: Metadata = {
   title: {
@@ -33,13 +34,7 @@ export default function RootLayout({
                   <Image src={logo} alt="Handcrafted Haven Logo" width={200} height={68} />
                 </Link>
               </div>
-              <div className={`${styles.navbarLinks} ${styles.responsive}`}>
-                <Link className={styles.hamburger} href='#'>&#9776;</Link>
-                <Link href="/">Home</Link>
-                <Link href="/catalog">Catalog</Link>
-                <Link href="/seller">Profile</Link>
-                <Link href="/contact">Contact</Link>
-              </div>
+              <Navigation></Navigation>
             </nav>
             {/* Page Content */}
             {children}

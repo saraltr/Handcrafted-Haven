@@ -60,63 +60,77 @@
   margin-bottom: 5px;
 }
 
-
-/*use the below to style the navbar. Already imported the styles in the appropriate pages*/
+/* navbar */
 .navbarContainer {
   background-color: var(--light-background) ; 
   padding: 15px 40px; 
-  display: flex; 
+  display: flex;
+  justify-content: space-between;
+}
+.navbar {
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.hamburger {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .navbarLinks {
-  background-color: var(--dark-brown); 
-  align-items: center;
-  margin-left: auto;
-  padding: .5rem;
+  background-color: var(--dark-brown);
   border-radius: 10px;
+  display: none;
+}
+
+.navbarLinks.show {
+  display: block;
+}
+
+.navbarLinks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbarLinks li {
+  margin: 1rem;
+}
+
+.navbarLinks a {
+  display: block;
+  color: var(--light-background);
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+.navbarLinks a:hover {
+  background-color: var(--main-green);
+  border-bottom: .2px solid #ddd;
 }
 
 .logoContainer {
   margin-right: 20px;
 }
 
-.navbarLinks a {
-  display: block;
-  color: var(--light-background); 
-  text-decoration: none; 
-  font-size: 25px; 
-  font-weight: 500; 
-}
-
-.navbarLinks a:hover {
-  color: var(--light-background); 
-  background-color: var(--main-green);
-  border-bottom: 2px solid #ddd; 
-}
-
-.navbarLinks a:first-child {
-  display: block;
-}
-
-.navbarLinks a {
-  display: none;
-}
-
-.responsive a {
-  display: block;
-}
-
 @media screen and (min-width: 70em) {
   .navbarLinks {
-    display: flex; 
-    gap: 200px; 
-  }
-
-  .navbarLinks a {
     display: block;
   }
 
-  .navbarLinks a:first-child {
+  .hamburger {
     display: none;
-  }
+  } 
+
+  .navbarLinks ul {
+    display: flex;
+  } 
+    .navbarLinks a {
+      margin: 0 3rem;
+    }
 }
