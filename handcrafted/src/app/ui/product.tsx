@@ -30,11 +30,11 @@ interface ProductProps {
 }
 
 const ProductCard: FC<ProductProps> = ({ productInfo }) => {
-  // extracts the path URL
+  // extracts the path url
   const pathname = usePathname();
-  const productId = pathname?.split('/').pop();
+  const productId = pathname?.split("/").pop();
 
-  // find matching ID
+  // find matching id
   const product = productInfo.find(product => product.id === productId);
 
   return (
@@ -44,13 +44,15 @@ const ProductCard: FC<ProductProps> = ({ productInfo }) => {
           <span className={styles.category}>Category/{product.category}</span>
           <h1 className={styles.productName}>{product.name}</h1>
           <Image
+            className={styles.productImage}
             src={product.image}
             alt={`${product.name} image`}
-            width={400}
-            height={400}
-            className={styles.productImage}
+            width={200}
+            height={200}
+            layout="responsive"
           ></Image>
           <h2 className={styles.seller}>Seller: {product.seller}</h2>
+          <p className={styles.pricing}>{`$${product.pricing}`}</p>
           <div className={styles.details}>
             <ul>
               <li>

@@ -8,11 +8,23 @@
 }
 
 .productImage {
+  max-width: 400px;
+  width: 100%;
+}
+.pricing {
+  margin: 1rem auto;
+  text-align: center;
+  background-color: var(--deep-blue);
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--light-background);
+}
+.productImage {
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: block;
   margin: .5rem auto;
-  object-fit: cover;
 }
 
 .category {
@@ -73,11 +85,6 @@
   margin-bottom: 10px;
 }
 
-.reviewHeader {
-  display: flex;
-  justify-content: space-between;
-}
-
 .username {
   font-weight: bold;
   color: var(--dark-brown);
@@ -136,4 +143,11 @@
   background-color: rgba(0, 128, 0, 0.199);
   border-radius: 5px;
   margin-bottom: .2rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .reviewHeader {
+    display: flex;
+    justify-content: space-between;
+  }
 }
