@@ -145,6 +145,10 @@
   margin-bottom: .2rem;
 }
 
+.formContainer label {
+  margin: 1rem 0;
+}
+
 @media only screen and (min-width: 600px) {
   .reviewHeader {
     display: flex;
