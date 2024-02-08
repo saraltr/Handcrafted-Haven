@@ -13,6 +13,7 @@ interface Products {
   image: string;
   pricing: number;
   seller: string;
+  description: string;
   reviews: Review[];
   category: string;
   material: string;
@@ -53,6 +54,7 @@ const ProductCard: FC<ProductProps> = ({ productInfo }) => {
           ></Image>
           <h2 className={styles.seller}>Seller: {product.seller}</h2>
           <p className={styles.pricing}>{`$${product.pricing}`}</p>
+          <p className={styles.desc}>{product.description}</p>
           <div className={styles.details}>
             <ul>
               <li>

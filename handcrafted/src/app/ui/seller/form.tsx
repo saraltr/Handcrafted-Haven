@@ -1,13 +1,72 @@
 'use client';
-
+ 
 import Link from "next/link";
 import styles from '@/app/ui/seller/form.module.css';
-//import { useFormState } from "react-dom";
-
-export default function ProductForm() {
+import React, { useState, FormEvent, useEffect } from 'react';
+import axios from 'axios';
+ 
+interface SellerFormProps {
+    productId: string;
+  }
+ 
+  interface SellerFormData {
+    name: string;
+    description: string;
+    pricing: number;
+    image: string;
+    seller: string;
+    category: string;
+    material: string;
+    sizes: string;
+  }
+ 
+export const SellerForm: React.FC<SellerFormProps> = ({ productId }) => {
+    const [name, setName] = useState("");
+    const [description, setDescription] = useState("");
+    const [pricing, setPricing] = useState(0);
+    const [image, setImage] = useState("");
+    const [seller, setSeller] = useState("");
+    const [category, setCategory] = useState("");
+    const [material, setMaterial] = useState("");
+    const [sizes, setSizes] = useState("");
+    const [showMessage, setShowMessage] = useState(false);
+ 
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+ 
+      const sellerData: SellerFormData = { name, description, pricing, image, seller, category, material, sizes };
+ 
+      try {
+        // send PUT request with productId to add the form info in database
+        await axios.put(`/api/${productId}`, { id: productId, sellerData });
+ 
+        // reset form fields after successful submission
+        setName("");
+        setDescription("");
+        setPricing(0);
+        setImage("");
+        setSeller("");
+        setCategory("");
+        setMaterial("");
+        setSizes("");
+        setShowMessage(true); // show the message after successful submission
+      } catch (error) {
+        console.error('Error submitting product:', error);
+      }
+    };
+ 
+    useEffect(() => {
+      const timeout = setTimeout(() => {
+        setShowMessage(false);
+      }, 3000);
+ 
+      return () => clearTimeout(timeout);
+    }, [showMessage]);
+ 
     return (
         <div className={styles.formPage}>
-            <form className={styles.addProductForm}>
+            {showMessage && <p className={styles.success}>Product submitted successfully!</p>}
+            <form className={styles.addProductForm} onSubmit={handleSubmit}>
                 <fieldset className={styles.productFieldset}>
                     {/* Title of Product */}
                     <label htmlFor="pName">Product Name: *</label>
@@ -15,6 +74,8 @@ export default function ProductForm() {
                         type="text"
                         name="pName"
                         id="pName"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         required
                         aria-describedby="title-error"
                     />
@@ -26,12 +87,14 @@ export default function ProductForm() {
                             </p>
                             ))}*/}
                     </div>
-
+ 
                     {/* Product Image */}
                     <label htmlFor="pImage">Image of Product:</label>
                     <input type="file"
                             id="pImage"
                             name="pImage"
+                            value={image}
+                            onChange={(e) => setImage(e.target.value)}
                             aria-describedby="image-error"
                     />
                     <div id="image-error" aria-live="polite" aria-atomic='true'>
@@ -42,7 +105,7 @@ export default function ProductForm() {
                             </p>
                             ))}*/}
                     </div>
-
+ 
                     {/* Product Description */}
                     <label htmlFor="pDescription">Description: *</label>
                     <textarea
@@ -50,6 +113,8 @@ export default function ProductForm() {
                         id="pDescription"
                         rows={10}
                         cols={50}
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
                         required
                         aria-describedby="description-error"
                     />
@@ -61,7 +126,7 @@ export default function ProductForm() {
                             </p>
                             ))}*/}
                     </div>
-
+ 
                     {/* Price of Product */}
                     <label htmlFor="pPrice">Price: *</label>
                     <input
@@ -69,6 +134,8 @@ export default function ProductForm() {
                         name="pPrice"
                         id="pPrice"
                         placeholder="Put in dollar amount"
+                        value={pricing}
+                        onChange={(e) => setPricing(parseInt(e.target.value))}
                         required
                         aria-describedby="title-error"
                     />
@@ -80,7 +147,7 @@ export default function ProductForm() {
                             </p>
                             ))}*/}
                     </div>
-
+ 
                     {/* Seller of Product */}
                     <label htmlFor="pSeller">Seller: *</label>
                     <input
@@ -88,6 +155,8 @@ export default function ProductForm() {
                         name="pSeller"
                         id="pSeller"
                         placeholder="Name of your company..."
+                        value={seller}
+                        onChange={(e) => setSeller(e.target.value)}
                         required
                         aria-describedby="seller-error"
                     />
@@ -99,12 +168,14 @@ export default function ProductForm() {
                             </p>
                             ))}*/}
                     </div>
-
+ 
                     {/* Category of Product */}
                     <label htmlFor="pCategory">Category: *</label>
                     <select
                         name="pCategory"
                         id="pCategory"
+                        value={category}
+                        onChange={(e) => setCategory(e.target.value)}
                         required
                         aria-describedby="category-error"
                     >
@@ -122,13 +193,15 @@ export default function ProductForm() {
                             </p>
                             ))}*/}
                     </div>
-
+ 
                     {/* Material of Product */}
                     <label htmlFor="pMaterial">Material: *</label>
                     <input
                         type="text"
                         name="pMaterial"
                         id="pMaterial"
+                        value={material}
+                        onChange={(e) => setMaterial(e.target.value)}
                         required
                         placeholder="What your product is made of..."
                         aria-describedby="material-error"
@@ -141,13 +214,15 @@ export default function ProductForm() {
                             </p>
                             ))}*/}
                     </div>
-
+ 
                     {/* Size of Product */}
                     <label htmlFor="pSize">Size: *</label>
                     <input
                         type="text"
                         name="pSize"
                         id="pSize"
+                        value={sizes}
+                        onChange={(e) => setSizes(e.target.value)}
                         required
                         placeholder="Dimensions, Weight, and/or Amount"
                         aria-describedby="size-error"
