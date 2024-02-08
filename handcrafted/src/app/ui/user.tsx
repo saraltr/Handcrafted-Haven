@@ -15,7 +15,7 @@ export const User = async () => {
         return null;
     }
     const userImage = session.user.image ?? defaultImage;
-    console.log(session); 
+    // console.log(session); 
 
     return (
         <section className={styles.section}>

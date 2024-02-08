@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import Banner from "@/app/ui/banner";
 import bannerImage from "../../public/images/banner1.jpg";
-import Search from "@/app/ui/search";
 import { CardHolder } from "./ui/cards";
+import Testimonials from "./ui/testimonals";
 
 // Assuming Products interface based on earlier provided code
 interface Products {
@@ -61,9 +61,9 @@ const Page = () => {
         desc2="Registered Creators"
         button={true}
       />
-     {/* <Search categories={categories} onSearch={handleSearch} />*/}
        {/* top 5 best rated products cardholder component */}
        <CardHolder></CardHolder>
+       <Testimonials></Testimonials>
     </main>
   );
 };
