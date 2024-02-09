@@ -1,6 +1,5 @@
 'use client';
 
-// RegisterForm.js
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -11,12 +10,7 @@ const RegisterForm = () => {
   const [password, setPassword] = useState('');
 
   const handleRegister = () => {
-    // Implement your registration logic here
     console.log('User registered with:', { firstName, lastName, email, password });
-    // Redirect the user to the login page after registration
-    // Replace '/login' with the actual path to your login page
-    // You need to set up your routes using a routing library like React Router
-    // Example: history.push('/login') or <Link to="/login">Login</Link>
   };
 
   return (
@@ -54,7 +48,6 @@ const RegisterForm = () => {
       </form>
       <p>
         Already have an account?{' '}
-        {/* Replace '/login' with the actual path to your login page */}
         <Link href="/login">Login here</Link>.
       </p>
     </div>

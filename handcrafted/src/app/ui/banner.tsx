@@ -1,6 +1,5 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 import Connection from "./connectionButton";
 
 interface BannerProps {

@@ -42,7 +42,7 @@ function ConnectionContent() {
 
     return (
       <div className={styles.container}>
-        Signed in as {userName} <br />
+        <p>Signed in as {userName}</p>
         <button onClick={() => signOut()}>Sign out</button>
       </div>
     );

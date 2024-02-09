@@ -1,4 +1,3 @@
-'use client';
 import React, { FC } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
@@ -45,7 +44,7 @@ const Testimonials = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get("/api/users");
-                const data = response.data;
+                const data = response.data.filter((user: UsersInfo) => user.story);
 
                 if (data) {
                     setUsers(data);

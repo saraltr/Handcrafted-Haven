@@ -17,7 +17,7 @@ button:hover .arrowIcon {
 }
 
 .container {
-    max-width: 400px;
+    max-width:fit-content;
     margin: 0 auto;
     padding: 20px;
     background-color: #fcf0f0ba;
@@ -25,4 +25,8 @@ button:hover .arrowIcon {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 18px;
     margin-bottom: 10px;
+}
+
+.container p {
+    margin-bottom: .5rem;
 }

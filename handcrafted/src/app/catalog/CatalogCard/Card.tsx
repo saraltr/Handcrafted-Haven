@@ -29,7 +29,7 @@ const Card: FC<CardHolderProps> = ({ productList }) => {
           <span className={styles.cat}>Category/{category}</span>
           <Link
             href={`/catalog/${id}`}>
-            <Image src={image} alt={`${name} image`} className={styles.cardImage} width={260} height={280} />
+            <Image src={image} alt={`${name} image`} className={styles.cardImage} width={260} height={280} layout='responsive' />
             <h2 className={styles.cardTitle}>{name}</h2>
           </Link>
           <p className={styles.cardDescription}>{description}</p>
@@ -85,11 +85,8 @@ const CatalogCard = () => {
   }
 
   return (
-    <>
-      <h1>Your Catalog</h1>
-      
+    <>    
       <Search categories={categories} onSearch={handleSearch} />
-
       <Card productList={filteredProducts.length > 0 ? filteredProducts : products} />
     </>
   );
