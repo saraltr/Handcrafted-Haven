@@ -7,6 +7,7 @@ import formStyles from "@/app/ui/products.module.css"
 import { authConfig } from "../../../pages/api/auth/[...nextauth]";
 import defaultImage from "../../../public/images/blank-profile-picture.png";
 import StoryForm from "./storyForm";
+import { SellerForm } from "./seller/form";
 
 export const User = async () => {
     const session = await getServerSession(authConfig);
@@ -16,11 +17,13 @@ export const User = async () => {
     }
     const userImage = session.user.image ?? defaultImage;
     // console.log(session); 
+    const username = session.user.name ?? "seller"
 
     return (
+        <>
         <section className={styles.section}>
-            <h2>Welcome to Your Profile</h2>
-            <p>Explore and manage your account information. Share your stories and experiences with the community.</p>
+            <h2>Welcome to Your Profile!</h2>
+            <p>Share your stories and experiences with the community and share your new creations.</p>
             <div className={styles.features}>
             <div className={styles.userProfileCard}>
                 <Image
@@ -31,18 +34,22 @@ export const User = async () => {
                     className={styles.userAvatar}
                 />
                 <div className={styles.userInfo}>
-                    <h2 className={styles.userName}>{session.user.name}</h2>
+                    <h3 className={styles.userName}>{session.user.name}</h3>
                     <p className={styles.userEmail}>{session.user.email}</p>
                     <LogoutButton />
                 </div>
             </div>
             <div className={formStyles.formContainer}>
-                <h3>Share Your Craft Story</h3>
+                <h3>Share Your Story</h3>
                 <p>Share your crafting journey, tips, or your latest handmade creations!</p>
             <StoryForm userId={session.user.email}></StoryForm> 
             </div>
             </div>
         </section>
-
+        <div className={styles.productForm}>
+            <h2 className={styles.sellerHeader}>Add a new product</h2>
+            <SellerForm sellerName={username}></SellerForm>
+        </div>
+        </>
     );
 };

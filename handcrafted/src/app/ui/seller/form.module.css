@@ -16,6 +16,7 @@
     max-width: 30rem;
     margin-left: auto;
     margin-right: auto;
+    color: var(--light-background);
 }
 
 .productFieldset label {
@@ -37,7 +38,6 @@
     width: 90%;
     max-width: 30rem;
     background-color: var(--ligther-green);
-    color: black;
 }
 
 .productFieldset select option {
@@ -45,7 +45,12 @@
 }
 
 .productFieldset input:required, .productFieldset textarea:required {
-    border-left: solid 6px rgba(0,0,0,0.3);
+    border-left: solid 6px rgba(141, 3, 3, 0.797);
+}
+
+.productFieldset form :required:valid {
+    background-color: #dff0d8;
+    border-left: solid 6px #228b22;
 }
 
 .productButton {
