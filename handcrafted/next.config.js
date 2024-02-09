@@ -1,5 +1,10 @@
 module.exports = {
   images: {
-    domains: ['lh3.googleusercontent.com', 's.gravatar.com', 'picsum.photos'],
+    remotePatterns: [
+   {
+      protocol: "https",
+      hostname: "**",
+    },
+   ],
   },
 };
