@@ -140,11 +140,11 @@ export const SellerForm: React.FC<SellerFormProps> = ({ sellerName }) => {
                     required
                 >
                     <option value="" disabled>Select a category</option>
-                    <option value="kitchenDining">Kitchen & Dining</option>
-                    <option value="homeDecor">Home Decor</option>
-                    <option value="furniture">Furniture</option>
-                    <option value="officeSupplies">Office Supplies</option>
-                    <option value="bathBody">Bath & Body</option>
+                    <option value="Kitchen & Dining">Kitchen & Dining</option>
+                    <option value="Home Decor">Home Decor</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Office Supplies">Office Supplies</option>
+                    <option value="Bath & Body">Bath & Body</option>
                 </select>
                 {/* Material of Product */}
                 <label htmlFor="material">Material: *</label>

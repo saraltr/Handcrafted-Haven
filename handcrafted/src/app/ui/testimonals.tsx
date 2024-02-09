@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
+import styles from "@/app/ui/testimonials.module.css";
 
 interface UsersInfo {
     id: string;
@@ -16,19 +17,23 @@ interface UserProps {
 
 const UserInfo: FC<UserProps> = ({ props }) => {
     return (
-        <div>
+        <div className={styles.tBorder}>
             {props.map(({ id, name, image, story, email }) => (
                 <div key={id}>
-                    <Image
-                        src={image}
-                        alt={`${name} user avatar`}
-                        width={100}
-                        height={100}
-                    />
-                    <div>
+                    <div className={styles.tcard}>
+                        <Image
+                            src={image}
+                            alt={`${name} user avatar`}
+                            width={100}
+                            height={100}
+                            className={styles.tImage}
+                        />
+                        <p className={styles.tIntro}>Company or Individual:</p>
                         <p>{name}</p>
+                        <p className={styles.tIntro}>Their Story:</p>
                         <p>{story}</p>
-                        <p>Contact: {email}</p>
+                        <p className={styles.tIntro}>Contact: </p>
+                        <p>{email}</p>
                     </div>
                 </div>
             ))}

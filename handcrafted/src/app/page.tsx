@@ -24,6 +24,7 @@ const Page = () => {
       />
        {/* top 5 best rated products cardholder component */}
        <CardHolder></CardHolder>
+       <h3 className="specialTitle">Learn more about the Companies or Individuals selling products at Handcrafted Haven</h3>
        <Testimonials></Testimonials>
     </main>
   );

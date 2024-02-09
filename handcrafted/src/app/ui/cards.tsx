@@ -66,7 +66,7 @@ export const CardHolder: FC = () => {
 
   return (
     <>
-      <h3>Top 5 Best Rated</h3>
+      <h3 className="specialTitle">Top 5 Best Rated</h3>
       <div className={styles.outline}>
         {loading ? (
           // show loader while images are loading
@@ -75,7 +75,7 @@ export const CardHolder: FC = () => {
           <Card productList={products} imageUrls={images} />
         )}
       </div>
-      <p className={styles.linkInfo}>** Click on the title to see more information about the product. **</p>
+      <p className={styles.linkInfo}>** Click on the title or image to see more information about the product. **</p>
     </>
   );
 }

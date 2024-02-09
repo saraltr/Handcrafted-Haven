@@ -46,6 +46,10 @@ h6 {
   text-align: center;
 }
 
+.specialTitle {
+  margin-top: 3rem;
+}
+
 p {
   padding: 5px;
 }

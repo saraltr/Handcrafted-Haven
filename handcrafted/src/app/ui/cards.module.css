@@ -9,7 +9,7 @@
 }
 
 .cards {
-    background: #38507089;
+    background: var(--deep-blue);
     border-radius: 12px;
     border: 2px solid var(--dark-brown);
     padding: 10px;

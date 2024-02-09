@@ -1,5 +1,5 @@
 .productCard {
-  border: 1px solid #ccc;
+  border: 1px solid var(--main-green);
   border-radius: 8px;
   padding: 20px;
   background-color: #fff;
@@ -110,16 +110,18 @@
   text-align: center;
 }
 
+
 .formContainer label {
   display: block;
+  color: var(--dark-brown);
 }
 
 .formContainer form {
-  border: solid 1px var(--dark-brown);
+  border: solid 3px var(--deep-blue);
   padding: 1rem;
   border-radius: 10px;
   margin: .5rem 0;
-
+  background-color: var(--light-background);
 }
 
 .formContainer input,
@@ -128,15 +130,20 @@
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
+  border: 2px solid var(--deep-blue);
+  background-color: var(---ligther-green);
 }
 
 .formContainer form :required:invalid {
   border: 2px solid #ce2029;
+  border-radius: 12px;
 }
 
 .formContainer form :required:valid {
-  background-color: #dff0d8;
-  border: solid 2px #228b22;
+  background-color: var(---ligther-green);
+  border: solid 2px var(--deep-blue);
+  border-radius: 12px;
+  color: black;
 }
 
 .success {

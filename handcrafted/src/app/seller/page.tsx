@@ -11,7 +11,7 @@ import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
     title: "Seller",
-    description: 'See your products and add new ones',
+    description: 'Add new products and view them in the catalog',
   };
 
 export default async function Seller() {
