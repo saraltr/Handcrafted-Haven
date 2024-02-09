@@ -1,19 +1,9 @@
 'use client';
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Banner from "@/app/ui/banner";
 import bannerImage from "../../public/images/banner1.jpg";
 import { CardHolder } from "./ui/cards";
 import Testimonials from "./ui/testimonals";
-
-// Assuming Products interface based on earlier provided code
-interface Products {
-  id: string;
-  name: string;
-  image: string;
-  description: string;
-  pricing: number;
-  category: string;
-}
 
 const Page = () => {
   // Define constants for the number of orders delivered and registered creators
