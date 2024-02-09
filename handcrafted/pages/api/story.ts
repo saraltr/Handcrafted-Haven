@@ -8,9 +8,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const { userId, userStory } = req.body;
 
+      // creates or updated user's story
       const addedStory = await prisma.user.upsert({
-        // where: { name: userId },
-        // data: { story: userStory }
         create: { story: userStory },
         update: { story: userStory },
         where: { email: userId}
