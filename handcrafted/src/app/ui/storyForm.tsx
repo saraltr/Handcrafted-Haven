@@ -3,7 +3,11 @@
 import React, { useState, FormEvent, useEffect } from 'react';
 import axios from 'axios';
 
-const StoryForm = ({ userId }) => {
+interface StoryFormProps {
+    userId: string;
+}
+
+const StoryForm: React.FC<StoryFormProps> = ({ userId }) => {
     const [story, setStory] = useState("");
     const [showMessage, setShowMessage] = useState(false);
 
@@ -29,7 +33,7 @@ const StoryForm = ({ userId }) => {
 
     return (
         <>
-        {showMessage && <p className='success'>Review submitted successfully!</p>}
+        {showMessage && <p className='success'>Story submitted successfully!</p>}
         <form onSubmit={handleSubmit}>
             <label htmlFor="story">Write or update your story here</label>
             <textarea
