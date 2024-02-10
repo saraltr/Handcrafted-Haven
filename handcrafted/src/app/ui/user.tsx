@@ -48,7 +48,7 @@ export const User = async () => {
             </div>
         </section>
         <div className={styles.productForm}>
-            <h2 className={styles.sellerHeader}>Add a new product</h2>
+            <h2 className={styles.sellerHeader}>Add a New Product</h2>
             <SellerForm sellerName={username}></SellerForm>
         </div>
         </>

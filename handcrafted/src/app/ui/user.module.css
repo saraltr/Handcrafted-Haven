@@ -7,11 +7,15 @@
 
 .productForm {
     margin-top: 20px;
-    border-radius: 8px;
-    background-color: #f0f0f0;
+    border-radius: 12px;
+    border: 1px solid var(--main-green);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);;
     padding: 20px;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
     /* Include padding and border in the element's total width and height */
 }
 
