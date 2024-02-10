@@ -12,6 +12,7 @@ interface Products {
   id: string;
   name: string;
   image: string;
+  seller: string;
   description: string;
   pricing: number;
   category: string;
@@ -24,7 +25,7 @@ interface CardHolderProps {
 const Card: FC<CardHolderProps> = ({ productList }) => {
   return (
     <div className={styles.card}>
-      {productList.map(({ id, name, image, description, pricing, category }) => (
+      {productList.map(({ id, name, image, seller, description, pricing, category }) => (
         <div key={id} className={styles.cardContent}>
           <span className={styles.cat}>Category/{category}</span>
           <Link
@@ -34,6 +35,7 @@ const Card: FC<CardHolderProps> = ({ productList }) => {
           </Link>
           <p className={styles.cardDescription}>{description}</p>
           <p className={styles.price}>{`$${pricing}`}</p>
+          <p className={styles.seller}>Made by <i>{seller}</i></p>
         </div>
       ))}
     </div>
